@@ -36,7 +36,7 @@ public class AverageMonitor {
     }
     
   //@Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of week] [Year]")
-    @Scheduled(cron = "0 40 18 0/1 * ?")
+    @Scheduled(cron = "0/5 * * * * ?")
     public void gymPublish() {
         /*final double average =
             eventRepository.getAverageValueGreaterThanStartTime(
@@ -44,6 +44,6 @@ public class AverageMonitor {
         averageRepository.save(
             new Average(new AverageKey("An event type", LocalDateTime.now()), average));*/
 //        LOG.info("Average value is {}", average);
-    	System.out.println("Today is TuesdayCurrent time is : "+ new Date());
+    	System.out.println("Today is Tuesday Current time is : "+ new Date());
     }
 }
